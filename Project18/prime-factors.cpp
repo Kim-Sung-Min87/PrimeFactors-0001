@@ -7,7 +7,7 @@ private:
 
 public:
 	vector<int> of(int n) {
-		
-		return {};
+		vector<int> result;
+		return result;
 	}
 };
