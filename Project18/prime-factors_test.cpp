@@ -4,18 +4,30 @@
 
 using namespace testing;
 
-TEST(PrimeFactors, Of1) {
-
+class PrimeFixtures : public Test {
+public:
 	PrimeFactors prime_factors;
-	vector<int> expected = {};
+	vector<int> expected;
+
+protected:	
+	void SetUp() override {
+	
+	}
+	void TearDown() override {
+
+	}
+};
+
+TEST_F(PrimeFixtures, Of1) {
+
+	expected = {};
 
 	EXPECT_EQ(expected, prime_factors.of(1));
 }
 
-TEST(PrimeFactors, Of2) {
+TEST_F(PrimeFixtures, Of2) {
 
-	PrimeFactors prime_factors;
-	vector<int> expected = {2};
+	expected = {2};
 
 	EXPECT_EQ(expected, prime_factors.of(2));
 }
